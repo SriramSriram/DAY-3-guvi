@@ -1,0 +1,230 @@
+DAY 3 assignment:
+Qn 1:
+For the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+CODE:
+var obj= [
+    {person:"sri", age:20, company:"Guvi"},
+    {person:"ram", age:25, company:"Guvi Geek"},
+    {person: "sekar", age:35,company:"Guvi Geek Academy"}
+]
+
+// using for loop:
+for(i=0; i<obj.length; i++){
+    user=obj[i]
+    console.log(`
+        Name: ${user.person}
+        Age: ${user.age}
+        Company: ${user.company}
+        `
+    );
+}
+
+// using forEach loop:
+obj.forEach((user)=> {
+    console.log(`
+        Name: ${user.person}
+        Age: ${user.age}
+        Company: ${user.company}
+        `
+    );
+
+})
+
+// using forIn loop:
+
+for (var index in obj) {
+    user=obj[index];
+    console.log(`
+        Name: ${user.person}
+        Age: ${user.age}
+        Company: ${user.company}
+        `
+    );
+
+}
+
+// using forOf loop:
+
+for(var index of obj){
+    console.log(`
+        Name: ${index.person}
+        Age; ${index.age}
+        Company: ${index.company}
+        `
+        );
+}
+
+OUTPUT:
+// USING FOR LOOP
+        Name: sri
+        Age: 20
+        Company: Guvi
+        
+app.js:10 
+        Name: ram
+        Age: 25
+        Company: Guvi Geek
+        
+app.js:10 
+        Name: sekar
+        Age: 35
+        Company: Guvi Geek Academy
+
+// USING FOREACH LOOP        
+app.js:20 
+        Name: sri
+        Age: 20
+        Company: Guvi
+        
+app.js:20 
+        Name: ram
+        Age: 25
+        Company: Guvi Geek
+        
+app.js:20 
+        Name: sekar
+        Age: 35
+        Company: Guvi Geek Academy
+
+// USING FORIN LOOP:        
+app.js:33 
+        Name: sri
+        Age: 20
+        Company: Guvi
+        
+app.js:33 
+        Name: ram
+        Age: 25
+        Company: Guvi Geek
+        
+app.js:33 
+        Name: sekar
+        Age: 35
+        Company: Guvi Geek Academy
+
+// USING FOROF LOOP:
+app.js:45 
+        Name: sri
+        Age; 20
+        Company: Guvi
+        
+app.js:45 
+        Name: ram
+        Age; 25
+        Company: Guvi Geek
+        
+app.js:45 
+        Name: sekar
+        Age; 35
+        Company: Guvi Geek Academy
+        
+
+Qn 2:
+Create your own resume data in JSON format
+
+let resume={
+    name: "SRIRAM.S",
+    age: "22",
+    sscDetails: {
+        schoolName: "Jawahar higher secondary school",
+        pasingYr:"2015",
+        percentage:"82%",
+        place: "Neyveli"
+    },
+    HSCDetails:{
+        schoolName: "Jawahar Matric higher secondary school",
+        pasingYr:"2017",
+        percentage:"83%",
+        place: "Neyveli"
+    },
+    graduationDetails:{
+        schoolName: "Jeppiaar engineering college",
+        pasingYr:"2021",
+        percentage:"79%",
+        place: "Chennai"
+    },
+    personalDetails:{
+        FathersName: "Sekar B",
+        address:"244/1, MRK Salai, indranagar, neyveli",
+        DOB:"30/04/2000",
+        Nationality: "indian",
+        LanguageKnown:"Tamil,English,Hindi",
+        phnumber:"9944430403"
+    },
+    areaofInterest: "webDevelopment",
+    TechnicalSkills:"python,HTML,CSS,Javascript,MSoffice",
+    personalTraits:"Flexibilty, team management",
+    paperPresentation:{
+        1: "fuelcells-Chennai Institute of technology, chennai,2019",
+        2:"a lake under destruction, call for conservation-KPR institute of technology- coimbatore,2016",
+    },
+    Internship:{
+        1: "Automation and safety workshop- hyundai,chennai,2018",
+        2:"automobile Brakes and System- brakesIndia, chennai,2018",
+        3:"ICF- chennai,2018",
+        4:"CIPET- chennai,2019"
+    },
+    projectdetails:{
+        1: "bicylce design competition 2018",
+        2: "Gokart design competition 2019",
+        3: "NFRC for automobile application 2021"
+    },
+    leadershipstraits:{
+        1:"CADD drawing coordinator-MECHFLAREZ,2017",
+        2:"ISHRAE Coordinator,2017-2019"
+    }
+}
+
+console.log(resume)
+
+	OUTPUT:
+    Name: SRIRAM.S
+    age: 22
+    sscDetails:
+        schoolName: Jawahar higher secondary school
+        passingYr:2015
+        percentage:82%
+        place:Neyveli
+    
+    HSCDetails:
+        schoolName: Jawahar Matric higher secondary school
+        passingYr:2017
+        percentage:83%
+        place:Neyveli
+
+    graduationDetails:
+        schoolName: Jeppiaar engineering college
+        passingYr:2021
+        percentage:79%
+        place:Chennai
+
+    PersonalDetails:
+        fathersname:Sekar B
+        address:244/1, MRK Salai, indranagar, neyveli
+        DOB:30/04/2000
+        Nationality:indian
+        Languageknown:Tamil,English,Hindi
+        phnumber:9944430403
+
+    areaofInterest:webDevelopment
+    techskills:webDevelopment
+    personalTraits:Flexibilty, team management
+    paperpresentation:
+        1:fuelcells-Chennai Institute of technology, chennai,2019
+        2:a lake under destruction, call for conservation-KPR institute of technology- coimbatore,2016
+
+    Internships:
+        1:Automation and safety workshop- hyundai,chennai,2018
+        2:automobile Brakes and System- brakesIndia, chennai,2018
+        3:ICF- chennai,2018
+        4:CIPET- chennai,2019
+
+    projectDetails:
+        1:bicylce design competition 2018
+        2:Gokart design competition 2019
+        3:NFRC for automobile application 2021
+
+    leadershipTraits:
+        1:CADD drawing coordinator-MECHFLAREZ,2017
+        2:ISHRAE Coordinator,2017-2019
